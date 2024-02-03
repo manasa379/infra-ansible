@@ -6,4 +6,4 @@
 - name: Restart logstash
   ansible.builtin.systemd:
     state: restarted
-    enabled: start
+    enabled: yes
