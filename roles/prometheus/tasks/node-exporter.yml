@@ -4,7 +4,7 @@
     dest: "/opt"
     remote_src: yes
 
-- name: Copy Node Exporter Service File
+- name: Copy Node Exporter Service
   ansible.builtin.template:
     src: node-exporter.service
     dest: /etc/systemd/system/node-exporter.service
