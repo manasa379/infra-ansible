@@ -4,12 +4,12 @@
     dest: "/opt"
     remote_src: yes
 
-- name: Copy Node Exporter Service
+- name: Copy Service
   ansible.builtin.template:
     src: node-exporter.service
     dest: /etc/systemd/system/node-exporter.service
 
-- name: Restart Node Exporter Service
+- name: Restart Service
   ansible.builtin.systemd:
     name: node-exporter
     state: restarted
