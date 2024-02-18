@@ -2,7 +2,8 @@
 Description = Node Exporter Service
 
 [Service]
-ExecStart=/opt/node_exporter{{node_exporter_version}}.linux-amd64/node_exporter  --collector.systemd
+ExecStart=/opt/node_exporter-{{node_exporter_version}}.linux-amd64/node_exporter --collector.systemd
 SyslogIdentifier=node-exporter
+
 [Install]
 WantedBy=multi-user.target
