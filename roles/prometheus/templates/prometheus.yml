@@ -33,4 +33,4 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ["devops155.online:9100"]
+      - targets: ["172.31.18.167:9100"]
