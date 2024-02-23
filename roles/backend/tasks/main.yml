@@ -7,6 +7,7 @@
   ansible.builtin.template:
     src: backend.service
     dest: /etc/systemd/system/backend.service
+
 - name: Add application user
   ansible.builtin.user:
     name: expense
@@ -14,10 +15,12 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: app_prereq
+
 - name: Install NodeJS dependencies
   ansible.builtin.shell: npm install
   args:
-    chdir: /app
+    chdir: app/
+
 - name: Install MySQL Client
   ansible.builtin.dnf:
     name: mysql
