@@ -20,6 +20,7 @@
   ansible.builtin.shell: npm install
   args:
     chdir: /app
+    executable: /bin/bash
 
 - name: Install MySQL Client
   ansible.builtin.dnf:
