@@ -20,7 +20,7 @@
   ansible.builtin.shell: npm install
   args:
     chdir: /app
-    ignore_errors: true
+
 
 - name: Install MySQL Client
   ansible.builtin.dnf:
