@@ -8,7 +8,7 @@
     src: record.yml
     dest: /opt/prometheus/record.yml
 
-- name: Copy Prometheus Configuration -Alert file
+- name: Copy Prometheus Configuration -Alerts file
   ansible.builtin.template:
           src: alerts.yml
           dest: /opt/prometheus/alerts.yml
