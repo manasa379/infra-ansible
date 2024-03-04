@@ -1,0 +1,5 @@
+groups:
+  - name: example
+    rules:
+      - alert: node_mem_used_percentage
+        expr: ((node_memory_MemFree_bytes+node_memory_cached_bytes+node_memory_Buffer_bytes)/node_memory_Memory_Memtotal_bytes*100)
