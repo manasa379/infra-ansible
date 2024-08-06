@@ -1,0 +1,27 @@
+pipeline {
+
+   agent any {
+
+   parameters{
+         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Choose Environment')
+         choice(name: 'APP_NAME', choices: ['frontend', 'backend'], description: 'APP_NAME')
+         string(name: 'VERSION', defaultValue: '', description: 'Version to Deploy')
+       }
+
+   stages {
+
+     stage( 'Update parameter store' ) {
+       steps {
+         sh aws ssm put-parameter --name  "${ENV}.${APP_NAME}.app_version" --type "String" --vaule "${VERSION}" --overwrite
+       }
+   }
+
+   stage('Deployment') {
+     steps {
+       sh '''
+     }
+   }
+
+   }
+
+}
