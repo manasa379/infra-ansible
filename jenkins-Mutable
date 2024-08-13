@@ -5,7 +5,7 @@ pipeline {
    parameters{
          choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Choose Environment')
          choice(name: 'APP_NAME', choices: ['frontend', 'backend'], description: 'APP_NAME')
-         string(name: 'VERSION', defaultValue: '', description: 'App to Deploy')
+         string(name: 'VERSION', defaultValue: '', description: 'Version to Deploy')
        }
 
    stages {
